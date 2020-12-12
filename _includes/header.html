@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a href="/" class="navbar-brand d-flex">
-    <img src="/assets/temp/selfie.png" height="80" class="d-inline-block align-top" alt="" loading="lazy">
+  <a href="{{ "/" | relative_url }}" class="navbar-brand d-flex">
+    <img src="{{ "/assets/temp/selfie.png" | relative_url }}" height="80" class="d-inline-block align-top" alt="" loading="lazy">
     <div class="d-flex flex-column ml-3">
       <h1 class="text-primary">{{ site.title }}</h1>
       <small>{{ site.subtitle }}</small>

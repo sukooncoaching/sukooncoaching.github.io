@@ -8,7 +8,7 @@ layout: default
 {% assign mod = forloop.index | modulo: 2 %}
 {% if mod == 0 %}
 <div class="media bg-secondary p-5 my-2">
-  <img src="assets/temp/{{ service.image }}">
+  <img src="/assets/temp/{{ service.image }}">
   <div class="media-body ml-5">
     <h5 class="mt-0 text-dark">{{ service.title}}</h5>
     {{ service.text }}
@@ -20,7 +20,7 @@ layout: default
     <h5 class="mt-0 text-dark">{{ service.title}}</h5>
     {{ service.text }}
   </div>
-  <img src="assets/temp/{{ service.image }}">
+  <img src="/assets/temp/{{ service.image }}">
 </div>
 {% endif %}
 {% endfor %}
