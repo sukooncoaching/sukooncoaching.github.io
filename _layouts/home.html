@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="jumbotron m-0 text-dark">
+  <h1 class="display-4">Aha!</h1>
+  <p class="lead">Find your Purpose. Pursue your Passion. Meet your Tribe. Be your best Brand.
+  </p>
+  <hr class="my-4">
+  <p>Let me help you to thrive.</p>
+  <a class="btn btn-outline-dark btn-lg" href="/contact/" role="button">
+    Talk to me
+  </a>
+</div>
+
+{% for prop in site.data.propositions %}
+{% assign mod = forloop.index | modulo: 2 %}
+{% if mod == 0 %}
+<div class="media bg-secondary p-5 my-2">
+  <img src="assets/temp/{{ prop.image }}">
+  <div class="media-body ml-5">
+    <h5 class="mt-0 text-dark">{{ prop.title}}</h5>
+    {{ prop.text }}
+  </div>
+</div>
+{% else %}
+<div class="media bg-primary p-5 my-2">
+  <div class="media-body mr-5">
+    <h5 class="mt-0 text-dark">{{ prop.title}}</h5>
+    {{ prop.text }}
+  </div>
+  <img src="assets/temp/{{ prop.image }}">
+</div>
+{% endif %}
+{% endfor %}
+
+{{ content }}

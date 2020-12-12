@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="card bg-primary text-dark">
+  <div class="card-body">
+    <form action="https://formspree.io/f/{form_id}" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" >
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <h3>Which services are you interested in?</h3>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="serviceFreeAssessment">
+        <label class="form-check-label" for="serviceFreeAssessment">
+          Free needs assessment
+        </label>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="serviceCvCoaching">
+        <label class="form-check-label" for="serviceCvCoaching">
+          CV coaching
+        </label>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="serviceInterviewPrep">
+        <label class="form-check-label" for="serviceInterviewPrep">
+          Interview preparation
+        </label>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="serviceMockInterviews">
+        <label class="form-check-label" for="serviceMockInterviews">
+          Mock interviews
+        </label>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="serviceNegotiating">
+        <label class="form-check-label" for="serviceNegotiating">
+          Negotiating an offer
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </form>
+  </div>
+</div>
