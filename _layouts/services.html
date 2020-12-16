@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<h1>{{ page.title | escape }}</h1>
+
 {{ content }}
 
 {% for service in site.data.services %}
@@ -10,14 +12,14 @@ layout: default
 <div class="media bg-secondary p-5 my-2">
   <img src="/assets/temp/{{ service.image }}">
   <div class="media-body ml-5">
-    <h5 class="mt-0 text-dark">{{ service.title}}</h5>
+    <h5 class="mt-0">{{ service.title}}</h5>
     {{ service.text }}
   </div>
 </div>
 {% else %}
 <div class="media bg-primary p-5 my-2">
   <div class="media-body mr-5">
-    <h5 class="mt-0 text-dark">{{ service.title}}</h5>
+    <h5 class="mt-0">{{ service.title}}</h5>
     {{ service.text }}
   </div>
   <img src="/assets/temp/{{ service.image }}">

@@ -2,9 +2,11 @@
 layout: default
 ---
 
+<h1>{{ page.title | escape }}</h1>
+
 {{ content }}
 
-<div class="card bg-primary text-dark">
+<div class="card">
   <div class="card-body">
     <form action="https://formspree.io/f/{form_id}" method="post">
       <div class="form-group">

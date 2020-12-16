@@ -2,13 +2,18 @@
 layout: default
 ---
 
-<div class="jumbotron m-0 text-dark">
+<div class="splash vh-100 d-flex justify-content-center">
+  <div class="flash mt-auto mb-5">^</div>
+</div>
+
+
+<div class="jumbotron m-0 bg-primary">
   <h1 class="display-4">Aha!</h1>
   <p class="lead">Find your Purpose. Pursue your Passion. Meet your Tribe. Be your best Brand.
   </p>
   <hr class="my-4">
   <p>Let me help you to thrive.</p>
-  <a class="btn btn-outline-dark btn-lg" href="{{ "/contact/" | relative_url }}" role="button">
+  <a class="btn btn-secondary" href="{{ "/contact/" | relative_url }}" role="button">
     Talk to me
   </a>
 </div>
@@ -16,17 +21,17 @@ layout: default
 {% for prop in site.data.propositions %}
 {% assign mod = forloop.index | modulo: 2 %}
 {% if mod == 0 %}
-<div class="media bg-secondary p-5 my-2">
+<div class="media p-5 my-2">
   <img src="assets/temp/{{ prop.image }}">
   <div class="media-body ml-5">
-    <h5 class="mt-0 text-dark">{{ prop.title}}</h5>
+    <h5 class="mt-0">{{ prop.title}}</h5>
     {{ prop.text }}
   </div>
 </div>
 {% else %}
-<div class="media bg-primary p-5 my-2">
+<div class="media p-5 my-2">
   <div class="media-body mr-5">
-    <h5 class="mt-0 text-dark">{{ prop.title}}</h5>
+    <h5 class="mt-0">{{ prop.title}}</h5>
     {{ prop.text }}
   </div>
   <img src="assets/temp/{{ prop.image }}">
